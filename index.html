@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="account-manager">
+            <label for="accounts">hesap seçiniz:</label>
+
+            <select name="accounts" id="ibans">
+            <option id="iban1" value="trxx yyyy xxxx yyyy" onselect="izin1()">trxx yyyy xxxx yyyy</option>
+            <option id="iban2" value="trxx yyyy xxxx yyyx">trxx yyyy xxxx yyyx</option>
+            <option id="iban3" value="trxx yyyy xxxx xyyx">trxx yyyy xxxx xyyx</option>
+      
+            </select>
+        </div> 
+        <br>
+        <div>
+            <label>Gönderilecek hesap</label>
+            <input onchange="display()" type="text" id="gonderilenHesap" onblur='return event.keyCode >= 48 && event.keyCode <= 57 ' >
+       
+        <div><br>
+            <label >Miktar</label>
+            <input disabled onchange="parasal()"  id="para" min="0" max="500" onkeypress='return event.keyCode >= 48 && event.keyCode <= 57'>
+        </div>
+    </div>
+    
+
+    <button disabled onclick ="x()"type="submit" id="btn" value="gönder">Gönder</button><br>
+    
+   </div>
+        
+
+       
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
